@@ -58,18 +58,19 @@ Using S3 select showed up to be an efficient and cost effective solution for sim
 
 For this case, we needed to deploy a simple and scalable Apache Airflow platform. We used Kubernetes on minikube and airflow default templates with the help of https://medium.com/@ipeluffo/running-apache-airflow-locally-on-kubernetes-minikube-31f308e3247a. Huge thanks to @ipeluffo for this well structured guide. This code was ran on Windows 10, using `minikube` version v1.22.0 , `kubectl` version Major:1  Minor:22 and `docker` version 19.03.13.
 
-Unfortunately I was not able to find how to deploy Kubernetes on a Docker Image, but still I'll show here how to run this code.
+Unfortunately I was not able to find how to deploy Kubernetes on a Docker Image, but still I'll show here how to run this code. Also I was not able to test this files on Linux but hopefully the .sh files will work like a charm.
+
 First, we will need to install in our machine `minikube` , `kubectl` and `Docker`. Then we can just navigate to our /second_case folder, and run:
 If using Windows Powershell:
 
     run_kubernetes.ps1
-    run_kubernetes.ps2
+    run_kubernetes2.ps2
    in case we want to delete the pods we can just run `script-delete.ps1`
 
 If using Bash:
 
     run_kubernetes.sh
-    run_kubernetes.sh
+    run_kubernetes2.sh
    in case we want to delete the pods we can just run `script-delete.sh`
 
 This will start our Airflow Platform, with only 1 DAG 
